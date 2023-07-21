@@ -6,7 +6,7 @@
 # O.S: Android - Termux
 # License: General Public License
 # Coded by: Ux4hack
-# Time: 25/12/2022 - 4/1/2023
+# Time: 15/07/2023 - 21/07/2023
 #
 # ##############################################
 # NOTA: Si copias código recuerda, dame créditos
@@ -134,7 +134,7 @@ cp -r ~/CyberMux/config/fish_right_prompt.fish ${conf2} > /dev/null 2>/dev/null
 banner
 echo -e "${GR} [${B}*${GR}] ${B}Instalano Neovim...${W}"
 echo
-yes|pkg install neovim-nightly;git clone -q https://github.com/NvChad/NvChad ~/.config/nvim/ --depth 1 > /dev/null 2>/dev/null
+yes|pkg install neovim;git clone -q https://github.com/NvChad/NvChad ~/.config/nvim/ --depth 1 > /dev/null 2>/dev/null
 echo -e "function fish_greeting\#\nend" > ~/.config/fish/functions/fish_greeting.fish
 rm $PREFIX/etc/motd > /dev/null 2>/dev/null
 
