@@ -1,6 +1,8 @@
 <p align="center">
 <a href="https://github.com/"><img alt="AwesomeWM Logo" height="200" align = "center" src="https://github.com/Ux4hack/CyberMux/blob/main/.logo.png"></a> 
+</p>
 
+<div align = "center">
 <a href="https://github.com/Ux4hack/CyberMux/blob/main/LICENSE">
 <img alt="License" src="https://img.shields.io/github/license/Ux4hack/CyberMux?style=flat&color=eee&label="> </a>
 
@@ -18,8 +20,6 @@
 
 <a href="https://github.com/Ux4hack/CyberMux/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/Ux4hack/CyberMux?style=flat&color=e06c75&label="> </a>
-
-</p>
 
 <h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con CyberMux 🌟 📲</h3> 
 <figure>
