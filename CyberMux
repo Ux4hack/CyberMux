@@ -1,0 +1,182 @@
+#!/bin/bash
+#
+# =================[CyberMux]===================
+# Versión: 1.0
+# Open Source - Software Libre
+# O.S: Android - Termux
+# License: General Public License
+# Coded by: Ux4hack
+# Time: 25/12/2022 - 4/1/2023
+#
+# ##############################################
+# NOTA: Si copias código recuerda, dame créditos
+# ##############################################
+#
+# ==============================================
+#                    Colors
+# ==============================================
+G="\e[0;32m\033[1m"
+R="\e[1;31m"
+RED="\e[101m"
+gre='\e[32m'
+W="\033[0m"
+B="\e[0;34m\033[1m"
+GR='\033[90m'
+# ==============================================
+#                function ctrl_c
+# ==============================================
+trap ctrl_c 2
+ctrl_c() {
+  echo
+  echo
+  echo -e " ${GR}[${R}*${GR}] ${R}CyberMux Finalizado."
+  echo -e " ${GR}[${R}*${GR}] ${R}Desarrollador: ${W}Ux4hack"
+  echo -e " ${GR}[${R}*${GR}] ${R}Telegram:${W} https://t.me/Ux4hack"
+  echo -e " ${GR}[${R}*${GR}] ${R}Github:${W} https://github.com/Ux4hack"
+  echo
+  exit
+}
+# ==============================================
+#           Install CyberMux in $HOME
+# ==============================================
+path=$(pwd)
+if [ "${path}" != "/data/data/com.termux/files/home/CyberMux" ]; then
+  echo
+echo -e "           ${GR}╭──> Ejecutar en${W} ~/CyberMux"
+echo -e "${GR}[${R}*${GR}] ${R}ERROR:${GR} │──> CyberMux no está instalado en ${W}HOME"
+echo -e "           ${GR}╰──> Reinstalar en ${W}HOME"
+echo
+exit 1
+fi
+# ==============================================
+#              Checking Conection
+# ==============================================
+ChCon() {
+until ping -q -c1 -W 1 8.8.8.8 > /dev/null 2>/dev/null
+do
+echo -e " ${GR}[${R}*${GR}] ${R}ERROR:${W} No hay conexión a internet"
+echo
+exit
+done
+}
+ChCon
+# ==============================================
+#                 Variables
+# ==============================================
+ConFish="/data/data/com.termux/files/usr/etc/fish/config.fish"
+# ==============================================
+#              Installing packages
+# ==============================================
+function InsDeps(){
+    dependencies_array=(lsd git fish bat curl pv python python2 neofetch)
+
+    echo; for program in "${dependencies_array[@]}"; do
+        if [ ! "$(command -v $program)" ]; then
+        banner
+	sleep 1
+echo -e "${R}  >${B} INSTALANDO DEPENDENCIAS${GR}"
+            echo -e "  ${GR}[${R}*${GR}] Instalando: ${R}$program"; sleep 1
+            yes|pkg install $program > /dev/null 2>/dev/null
+            echo -e "\n${R}  >${GR} $program${W}${G} instalado
+            ${W}\n"; sleep 2
+            let counter+=1
+        fi
+    done
+}
+conf="/data/data/com.termux/files/home/.config/fish/functions/fish_prompt.fish"
+function banner() {
+clear
+for i in $(seq 1 42); do echo -ne "${GR}-"; done; echo -ne "${R}"
+sleep 0.2
+echo -e "${R}
+	███████▀▀▀░░░░░░░▀▀▀███████
+	████▀░░░░░░░░░░░░░░░░░▀████
+	███│░░░░░░░░░░░░░░░░░░░│███
+	██▌│░░░░░░░░░░░░░░░░░░░│▐██
+	██░└┐░░░░░░░░░░░░░░░░░┌┘░██
+	██░░└┐░░░░░░░░░░░░░░░┌┘░░██
+	██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██
+	██▌░│██████▌░░░▐██████│░▐██
+	███░│▐███▀▀░░▄░░▀▀███▌│░███
+	██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██
+	██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██
+	████▄─┘██▌░░░░░░░▐██└─▄████
+	█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████
+	████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████
+	█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████
+	███████▄░░░░░░░░░░░▄███████
+	██████████▄▄▄▄▄▄▄██████████
+  	     ${GR}[${R}*${GR}]${W} CyberMux ${GR}[${R}*${GR}]"
+sleep 0.2
+for i in $(seq 1 42); do echo -ne "${GR}-"; done; echo -ne "${R}\n"
+}
+InsDeps
+banner
+#echo
+echo -ne "${GR}[${B}*${GR}] ${B}Escribe tu nombre:${W} "
+read name
+if [ -z "${name}" ]; then
+name="CyberMux"
+fi
+mkdir -p ~/.config/omf > /dev/null 2>/dev/null
+mkdir -p /data/data/com.termux/files/home/.config/fish/functions
+mkdir -p /data/data/com.termux/files/home/.config/omf/theme > /dev/null 2>/dev/null
+mkdir -p /data/data/com.termux/files/home/.local/share/omf/themes > /dev/null 2>/dev/null
+
+conf2="/data/data/com.termux/files/home/.local/share/omf/themes/"
+
+echo ''usr="${name}"'' > ~/CyberMux/config/.usr
+
+cp -r ~/CyberMux/config/fish_prompt.fish /data/data/com.termux/files/home/.config/fish/functions/fish_prompt.fish && sed -i "s/Ux4hack/$name/g" /data/data/com.termux/files/home/.config/fish/functions/fish_prompt.fish  /dev/null 2>/dev/null
+cp -r ~/CyberMux/config/fish_prompt.fish /data/data/com.termux/files/home/.local/share/omf/themes/fish_prompt.fish && sed -i "s/Ux4hack/$name/g" /data/data/com.termux/files/home/.local/share/omf/themes/fish_prompt.fish > /dev/null 2>/dev/null
+cp -r ~/CyberMux/config/fish_right_prompt.fish ${conf2} > /dev/null 2>/dev/null
+###Nvim
+banner
+echo -e "${GR} [${B}*${GR}] ${B}Instalano Neovim...${W}"
+echo
+yes|pkg install neovim-nightly;git clone -q https://github.com/NvChad/NvChad ~/.config/nvim/ --depth 1 > /dev/null 2>/dev/null
+echo -e "function fish_greeting\#\nend" > ~/.config/fish/functions/fish_greeting.fish
+rm $PREFIX/etc/motd > /dev/null 2>/dev/null
+
+cat <<-bashrc > $PREFIX/etc/bash.bashrc
+bash ~/CyberMux/config/.1
+alias bye="exit;exit"
+fish;bye
+bashrc
+# .nanorc
+cat <<-nanorc > $HOME/.nanorc
+set historylog
+set tabsize 4
+set autoindent
+set titlecolor white,red
+set statuscolor gray
+set keycolor white,red
+set functioncolor green
+set numbercolor red,gray
+set softwrap
+set softwrap
+nanorc
+
+cat <<-props > $HOME/.termux/termux.properties
+allow-external-apps = true
+terminal-cursor-style = bar
+terminal-cursor-blink-rate = 350
+props
+
+cat <<-pez > $PREFIX/etc/fish/config.fish
+function __fish_command_not_found_handler --on-event fish_command_not_found
+        /data/data/com.termux/files/usr/libexec/termux/command-not-found $argv[1]
+end
+alias cybermux="termux-open-url https://github.com/Ux4hack/CyberMux"
+alias root="proot -0 -w ~ $PREFIX/bin/fish"
+alias ls='lsd'
+alias cat='bat --style=plain --paging=never'
+set USER CyberMux
+function on_exit --on-event fish_exit
+echo 'Cerrando CyberMux...'
+sleep 1
+end
+pez
+cp -r ~/CyberMux/config/font.ttf ~/.termux > /dev/null 2>/dev/null
+
+# I'm Ux4hack
