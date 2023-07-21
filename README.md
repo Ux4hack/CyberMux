@@ -23,7 +23,7 @@
 
 <h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con CyberMux 🌟 📲</h3>
 </a>
-<figure>
+</div>
  
 ---
 
