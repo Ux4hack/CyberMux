@@ -30,14 +30,14 @@
 ## Caracteristicas :
 
 * Añade **Tu nombre** al inicio de Termux.
-* Instala la especial shell fish **shell fish** con tu nombre y contarás con un autocompletado increíble.
+* Instala la especial la **shell fish** con tu nombre y contarás con un autocompletado increíble.
 * Crea una **Lista de alias** Para distintas acciones especiales.
 * Te instala **NEOVIM** Un editor increible, util para programadores.
 * **Iconos** en toda la interfás para una mejor presentacion.
 * Un banner elegante
 * Te instala los paquetes base a usar en Termux
 * Root Fake
-* Cursor parpadeante, colores en nano, y mucho más XD.y
+* Cursor parpadeante, colores en nano, y mucho más XD.
 - > ` Autor: Ux4hack `
 
 
