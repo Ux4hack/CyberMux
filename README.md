@@ -1,5 +1,3 @@
-<h1><a href="https://github.com/Ux4hack/Cybermux">CyberMux</a></h1>
-
 ![LogoFacha](https://github.com/Ux4hack/CyberMux/blob/main/.logo.png)
 
 
