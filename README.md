@@ -1,5 +1,6 @@
+<p align="center">
 ![LogoFacha](https://github.com/Ux4hack/CyberMux/blob/main/.logo.png)
-
+</p>
 
 <a href="https://github.com/Ux4hack/CyberMux/blob/main/LICENSE">
 <img alt="License" src="https://img.shields.io/github/license/Ux4hack/CyberMux?style=flat&color=eee&label="> </a>
@@ -18,7 +19,6 @@
 
 <a href="https://github.com/Ux4hack/CyberMux/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/Ux4hack/CyberMux?style=flat&color=e06c75&label="> </a>
-</a>
 
 <h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con Cybermux 🌟 📲</h3>
 
