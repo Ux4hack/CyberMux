@@ -21,9 +21,7 @@
 
 </p>
 
-<p align="center">
-<h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con Cybermux 🌟 📲</h3>
-</p>
+<h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con Cybermux 🌟 📲</h3> 
 
 ---
 
