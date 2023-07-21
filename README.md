@@ -1,7 +1,7 @@
 <p align="center">
-
- ![LogoFacha](https://github.com/Ux4hack/CyberMux/blob/main/.logo.png)
+<a href="https://github.com/"><img alt="AwesomeWM Logo" height="130" align = "center" src="https://github.com/Ux4hack/CyberMux/blob/main/.logo.png"></a>
 </p>
+<h1 align="center">  CyberMux  </h1>
 
 <a href="https://github.com/Ux4hack/CyberMux/blob/main/LICENSE">
 <img alt="License" src="https://img.shields.io/github/license/Ux4hack/CyberMux?style=flat&color=eee&label="> </a>
