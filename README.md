@@ -18,6 +18,7 @@
 
 <a href="https://github.com/Ux4hack/CyberMux/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/Ux4hack/CyberMux?style=flat&color=e06c75&label="> </a>
+</a>
 
 <h3>💡De un inicio de termux basico y aburrido a uno increíble y avanzado con muchas características con Cybermux 🌟 📲</h3>
 
@@ -26,7 +27,7 @@
 ## Caracteristicas :
 
 * Añade **Tu nombre** al inicio de Termux.
-* Instala la especial shell fish **CON TU NOMBRE** Y contarás con un autocompletado increíble.
+* Instala la especial shell fish **shell fish** con tu nombre y contarás con un autocompletado increíble.
 * Crea una **Lista de alias** Para distintas acciones especiales.
 * Te instala **NEOVIM** Un editor increible, util para programadores.
 * **Iconos** en toda la interfás para una mejor presentacion.
