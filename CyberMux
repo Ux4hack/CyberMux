@@ -68,7 +68,7 @@ ConFish="/data/data/com.termux/files/usr/etc/fish/config.fish"
 #              Installing packages
 # ==============================================
 function InsDeps(){
-    dependencies_array=(lsd git fish bat curl pv python python2 neofetch)
+    dependencies_array=(lsd git fish bat curl pv python python2 proot neofetch)
 
     echo; for program in "${dependencies_array[@]}"; do
         if [ ! "$(command -v $program)" ]; then
